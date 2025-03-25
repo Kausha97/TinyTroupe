@@ -24,6 +24,7 @@ With the advent of advanced Large Language Models (LLMs) like GPT-4, the relevan
 
 QUESTION 3: Create a simulation of your own topic and show me the transcript. This implies define at least two personas of your own choice with conflict built in and observe their conversation. You can simply copy/paste the conversation in a .md file. Please comment on the transcript whether you think the Turing Test is passed.
 
+```python
 >>> lisa_ds = create_lisa_the_data_scientist() 
 >>> lisa_ds.listen_and_act("Tell me about your life.")
 USER --> Lisa Carter: [CONVERSATION] 
@@ -46,9 +47,9 @@ Lisa Carter acts: [DONE]
 >>> kausha.define("age", 22)
 >>> kausha.define("nationality","Indian")
 >>> kausha.define("occupation", "She is a Graduate student in university.")
->>> kausha.listen_and_act("Tell me about yourself")
+>>> kausha.listen_and_act("Tell me about your yourself")
 USER --> Kausha: [CONVERSATION] 
-          > Tell me about yourself
+          > Tell me about your yourself
 Kausha acts: [THINK] 
             > I need to introduce myself and share some information about my background and current
             > situation.
@@ -70,12 +71,11 @@ USER --> Kausha: [CONVERSATION]
           > Hey Aarav, What are your views about Analytics career in Sports?
 TinyPerson(name='Kausha')
 >>> world.run(3)
-
-# Step 1
 ─────────────────────────────────────────────────────────────────── Computer Lab step 1 of 3 ───────────────────────────────────────────────────────────────────
 Kausha acts: [THINK] 
             > I need to think about my views on a career in analytics within the sports industry.
-            > It's a growing field, and I should consider the opportunities and challenges it presents.
+            > It's a growing field, and I should consider the opportunities and challenges it
+            > presents.
 Kausha acts: [TALK] 
             > I think a career in analytics within sports is really exciting. It combines data
             > analysis with the passion for sports, which can lead to better decision-making for
@@ -84,14 +84,31 @@ Kausha acts: [TALK]
             > staying updated with the latest trends and tools is essential.
 Kausha acts: [DONE] 
 
->>> Aarav acts: [TALK] 
+Kausha --> Aarav: [CONVERSATION] 
+            > My name is Kausha, and I'm a 22-year-old graduate student. I'm currently studying at
+            > university, and I'm really passionate about learning new things. I enjoy exploring
+            > different subjects and meeting new people. What would you like to know more about?
+Kausha --> Aarav: [CONVERSATION] 
+            > I think a career in analytics within sports is really exciting. It combines data
+            > analysis with the passion for sports, which can lead to better decision-making for
+            > teams and athletes. There are many opportunities in this field, especially with the
+            > increasing use of technology in sports. However, it can also be quite competitive, and
+            > staying updated with the latest trends and tools is essential.
+Aarav acts: [TALK] 
            > Hi Kausha! It's great to meet you. I'm also a graduate student, studying data science.
            > I find the intersection of analytics and sports fascinating too! What specific areas in
            > sports analytics are you most interested in?
 Aarav acts: [DONE] 
 
-# Step 2
+Aarav --> Kausha: [CONVERSATION] 
+           > Hi Kausha! It's great to meet you. I'm also a graduate student, studying data science.
+           > I find the intersection of analytics and sports fascinating too! What specific areas in
+           > sports analytics are you most interested in?
 ─────────────────────────────────────────────────────────────────── Computer Lab step 2 of 3 ───────────────────────────────────────────────────────────────────
+Kausha acts: [THINK] 
+            > Aarav is also a graduate student studying data science, which is great! I should think
+            > about the specific areas in sports analytics that interest me, like player performance
+            > analysis or injury prediction.
 Kausha acts: [TALK] 
             > Hi Aarav! It's great to meet you too! I'm really interested in player performance
             > analysis and how data can help in making strategic decisions during games. I also find
@@ -99,7 +116,12 @@ Kausha acts: [TALK]
             > you? What areas in sports analytics do you find most intriguing?
 Kausha acts: [DONE] 
 
->>> Aarav acts: [TALK] 
+Kausha --> Aarav: [CONVERSATION] 
+            > Hi Aarav! It's great to meet you too! I'm really interested in player performance
+            > analysis and how data can help in making strategic decisions during games. I also find
+            > injury prediction fascinating, as it can really impact a team's success. What about
+            > you? What areas in sports analytics do you find most intriguing?
+Aarav acts: [TALK] 
            > I'm really interested in player performance analysis as well! It's amazing how data can
            > provide insights into a player's strengths and weaknesses. Injury prediction is also
            > crucial; it can save teams a lot of trouble. I'm particularly intrigued by how machine
@@ -107,8 +129,17 @@ Kausha acts: [DONE]
            > on any projects related to these areas?
 Aarav acts: [DONE] 
 
-# Step 3
+Aarav --> Kausha: [CONVERSATION] 
+           > I'm really interested in player performance analysis as well! It's amazing how data can
+           > provide insights into a player's strengths and weaknesses. Injury prediction is also
+           > crucial; it can save teams a lot of trouble. I'm particularly intrigued by how machine
+           > learning can be applied to predict outcomes based on historical data. Have you worked
+           > on any projects related to these areas?
 ─────────────────────────────────────────────────────────────────── Computer Lab step 3 of 3 ───────────────────────────────────────────────────────────────────
+Kausha acts: [THINK] 
+            > Aarav is also interested in player performance analysis and machine learning
+            > applications in sports. I should think about any relevant projects I've worked on that
+            > relate to these topics.
 Kausha acts: [TALK] 
             > Yes, I have worked on a project analyzing player performance using historical data. We
             > used various metrics to evaluate players' strengths and weaknesses, and it was
@@ -117,12 +148,3 @@ Kausha acts: [TALK]
             > games. It was a great learning experience! Have you had the chance to work on any
             > projects yourself?
 Kausha acts: [DONE] 
-
->>> Aarav acts: [TALK] 
-           > That sounds like an incredible project! It's amazing how data can really shape coaching
-           > strategies. I haven't worked on a specific project yet, but I've been learning a lot
-           > about data analysis techniques and how they can be applied in sports. I'm eager to get
-           > involved in a project soon. What machine learning techniques did you find most
-           > effective for predicting player performance?
-Aarav acts: [DONE] 
-```
